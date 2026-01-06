@@ -82,11 +82,14 @@ console.log('-----------------');
 // --------------
 
 function sum(a, b){
+    console.log(arguments);
+    console.log(...arguments);
     const add = a + b;
     return add;
 }
 const output = sum(5, 10);
 console.log(output);
+console.log(sum.length);
 console.log('-----------------');
 
 // ------ object ------
