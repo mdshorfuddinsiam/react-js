@@ -12,6 +12,8 @@ function App() {
       <Country name="India" capital="Delhi"></Country>
       <Country name="Srilanka" capital="Colombo"></Country>
       <Skills></Skills>
+      <Player name="Tamim" runs="15000"></Player>
+      <Player name="Sakib" runs="14000"></Player>
     </>
   )
 }
@@ -79,6 +81,17 @@ function Sports(){
 }
 
 
+// function Player(props){
+  // console.log(props);
+// const {name, runs} = {name: 'Tamim', runs: '15000'}    // Destructuring
+function Player({name, runs}){
+  return ( 
+    <div className='wrapper' style={{marginTop: '20px'}}>
+      <p>Name : {name}</p>
+      <p>Runs : {runs}</p>
+    </div>
+  )
+}
 
 
 
