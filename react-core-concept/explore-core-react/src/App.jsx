@@ -2,12 +2,13 @@ import './App.css'
 import Letter from './Letter.jsx';
 import Mobile from './Mobile.jsx';
 import ToDo from './ToDo.jsx'
+import Library from './Library.jsx'
 
 function App() {
 
-  const time = 50;
+  // const time = 50;
 
-  const letters = ['A', 'B', 'C', 'D', 'E'];
+  // const letters = ['A', 'B', 'C', 'D', 'E'];
 
   const mobiles = [
     {id: 1, brand:"Xiaomi", price:20000},
@@ -15,9 +16,17 @@ function App() {
     {id: 3, brand:"Samsung", price:45000},
   ];
 
+  const books = [
+    {id: 1, name:"Book-1", price:200},
+    {id: 2, name:"Book-2", price:300},
+    {id: 3, name:"Book-3", price:450},
+  ];
+
   return (
     <>
       <h1>React Core Concept</h1>
+
+      <Library address="Poltan, Dhaka" books={books}></Library>
 
       {
         mobiles.map(mobile => <Mobile key={mobile.id} mobile={mobile}></Mobile>)

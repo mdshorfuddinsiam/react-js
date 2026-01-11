@@ -11,9 +11,9 @@
 //     )
 // }
 export default function Mobile({mobile}){
-    console.log(mobile);
-    console.log(mobile.brand);
-    console.log('-----------');
+    // console.log(mobile);
+    // console.log(mobile.brand);
+    // console.log('-----------');
     return (
         <div className="wrapper">
             <h4>Brand: {mobile.brand}</h4>
