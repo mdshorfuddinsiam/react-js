@@ -1,10 +1,20 @@
 import './App.css'
+import ToDo from './ToDo.jsx'
 
 function App() {
+
+  const time = 50;
+
   return (
     <>
       <h1>React Core Concept</h1>
-      <Love></Love>
+      
+      {/* <ToDo task="Learn React" isDone={true} time={30}></ToDo> */}
+      <ToDo task="Learn React" isDone={true} time={time}></ToDo>
+      <ToDo task="Learn Vue" isDone={false}></ToDo>
+      <ToDo task="Take a shower" isDone={true}></ToDo>
+      
+      {/* <Love></Love>
       <Person></Person>
       <Student></Student>
       <Student></Student>
@@ -13,7 +23,7 @@ function App() {
       <Country name="Srilanka" capital="Colombo"></Country>
       <Skills></Skills>
       <Player name="Tamim" runs="15000"></Player>
-      <Player name="Sakib" runs="14000"></Player>
+      <Player name="Sakib" runs="14000"></Player> */}
     </>
   )
 }
