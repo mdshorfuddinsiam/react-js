@@ -10,7 +10,11 @@ function App() {
       <h1>React Core Concept</h1>
       
       {/* <ToDo task="Learn React" isDone={true} time={30}></ToDo> */}
-      <ToDo task="Learn React" isDone={true} time={time}></ToDo>
+      <ToDo 
+        task="Learn React" 
+        isDone={true} 
+        time={time}>
+      </ToDo>
       <ToDo task="Learn Vue" isDone={false}></ToDo>
       <ToDo task="Take a shower" isDone={true}></ToDo>
       
