@@ -1,22 +1,40 @@
 import './App.css'
+import Letter from './Letter.jsx';
+import Mobile from './Mobile.jsx';
 import ToDo from './ToDo.jsx'
 
 function App() {
 
   const time = 50;
 
+  const letters = ['A', 'B', 'C', 'D', 'E'];
+
+  const mobiles = [
+    {id: 1, brand:"Xiaomi", price:20000},
+    {id: 2, brand:"Xiaomi", price:30000},
+    {id: 3, brand:"Samsung", price:45000},
+  ];
+
   return (
     <>
       <h1>React Core Concept</h1>
+
+      {
+        mobiles.map(mobile => <Mobile key={mobile.id} mobile={mobile}></Mobile>)
+      }
+
+      {/* {
+        letters.map(letter => <Letter letter={letter}></Letter>)
+      } */}
       
-      {/* <ToDo task="Learn React" isDone={true} time={30}></ToDo> */}
+      {/* <ToDo task="Learn React" isDone={true} time={30}></ToDo>
       <ToDo 
         task="Learn React" 
         isDone={true} 
         time={time}>
       </ToDo>
       <ToDo task="Learn Vue" isDone={false}></ToDo>
-      <ToDo task="Take a shower" isDone={true}></ToDo>
+      <ToDo task="Take a shower" isDone={true}></ToDo> */}
       
       {/* <Love></Love>
       <Person></Person>
