@@ -5,6 +5,7 @@ import './App.css'
 import { Suspense } from 'react';
 import Friends from './Friends';
 import Posts from './Posts';
+import Players from './Players';
 
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
 //                    .then(res => res.json());
@@ -33,8 +34,7 @@ function App() {
   // }
 
   // const frinedPromise = fetchFriends();
-
-  const postsPromise = fetchPosts();
+  // const postsPromise = fetchPosts();
 
   return (
     <>
@@ -48,8 +48,12 @@ function App() {
         <Friends frinedPromise={frinedPromise}></Friends>
       </Suspense> */}
 
-      <Suspense fallback={<h3>Post will be showing ...</h3>}>
+      {/* <Suspense fallback={<h3>Post will be showing ...</h3>}>
         <Posts postsPromise={postsPromise}></Posts>
+      </Suspense> */}
+
+      <Suspense fallback={<h2>Players Loading ...</h2>}>
+        <Players></Players>
       </Suspense>
 
       <Batsman></Batsman>
