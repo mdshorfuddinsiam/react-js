@@ -10,6 +10,11 @@
  * 
  */
 
+/**
+ * 1. just write a simple fetch with json conversion
+ * 2. wrap the data loading under sunspense
+ */
+
 // fetch('https://jsonplaceholder.typicode.com/todos/1')
 //       .then(res => res.json())
 //       .then(data => console.log(data))
