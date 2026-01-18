@@ -1,11 +1,12 @@
 import React from 'react';
+import './Country.css';
 
 const Country = ({country}) => {
     // console.log(country.flags);
     // console.log(country.fla);
 
     return (
-        <div>
+        <div className="country">
             <h3>Name: {country.name.common}</h3>
             {/* <img src={country.flags.pn}></img> */}  {/* --- Wrong property (No Error) --- */}
             {/* <img src={country.fla?.pn}></img> */}   {/* --- Wrong property (But Working) --- */}
