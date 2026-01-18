@@ -5,6 +5,10 @@ const Country = ({country}) => {
     // console.log(country.flags);
     // console.log(country.fla);
 
+    const handleVisited = () => {
+        console.log('Visited Clicked!')
+    }
+
     return (
         <div className="country">
             <h3>Name: {country.name.common}</h3>
@@ -15,6 +19,7 @@ const Country = ({country}) => {
             <img src={country.flags.png}></img>
             <p>Independent: {country.independent ? 'Free' : 'Not Free'}</p>
             <p>Population: {country.population}</p>
+            <button onClick={handleVisited}>Not Visited</button>
             <br></br>
         </div>
     );
