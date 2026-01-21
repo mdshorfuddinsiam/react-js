@@ -10,7 +10,7 @@ const getCartFromLocalStorage = () =>{
 
 const saveCartToLocalStorage = cart => {
     const cartStringified = JSON.stringify(cart);
-    localStorage.setItem(cartStringified);
+    localStorage.setItem('cart', cartStringified);
 }
 
 const addItemToCartLocalStorage = (id) => {
@@ -19,7 +19,10 @@ const addItemToCartLocalStorage = (id) => {
     const newCart = [...cart, id];
 
     // save new cart to local storage
-    saveCartToLocalStorage(id);
+    saveCartToLocalStorage(newCart);
 }
 
-export {getCartFromLocalStorage, addItemToCartLocalStorage}
+export {
+    getCartFromLocalStorage as getStoredCart, 
+    addItemToCartLocalStorage as addToStoredCart
+}
