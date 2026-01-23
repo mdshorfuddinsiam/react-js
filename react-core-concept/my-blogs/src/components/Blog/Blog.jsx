@@ -6,9 +6,10 @@ import { FaBookmark } from "react-icons/fa";
 //     // console.log(props.blog);
 //     const {blog} = props;
 //     console.log(blog);
-const Blog = ({ blog }) => {
-    console.log(blog);
+const Blog = ({ blog, handleBookmark }) => {
+    // console.log(blog, handleBookmark);
     // console.log(blog.hashtags);
+    // console.log(handleBookmark);
 
     return (
         <div>
@@ -20,13 +21,15 @@ const Blog = ({ blog }) => {
                     <div className="author flex justify-around items-center">
                         <h3>{blog.author}</h3>
                         <img className='w-16' src={blog.author_img} alt="" />
-                        <FaBookmark size={25} />
+                        <button onClick={() => handleBookmark(blog)}>
+                            <FaBookmark size={25} />
+                        </button>
                     </div>
                     <h2 className="card-title">{ blog.title }</h2>
                     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                     <div className="flex">
                         {
-                            blog.hashtags.map(hashtag => <p>{hashtag}</p>)
+                            blog.hashtags.map((hashtag, index) => <p key={index}>{hashtag}</p>)
                         }
                     </div>
                     <div className="card-actions justify-end">
